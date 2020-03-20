@@ -23,19 +23,19 @@ body {
 }
 
 
-.mainBox {
+.symptomsBox {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3em;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 3em;
-  background: url(images/background.jpg) fixed;
+  margin-bottom: 10px;
+  background: url(images/mask.jpg) fixed;
   border: 0.1em #371d0d solid;
 }
 
-.startQuiz,
+.beginTest,
 .box {
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@ body {
   justify-content: space-between;
   text-align: center;
   margin: auto;
-  padding: 1em;
+  padding: 3px;
   border: 0.1em #371d0d solid;
   background-color: #ffd700;
 }
@@ -77,3 +77,116 @@ legend {
   background-color: yellow;
   color: black;
 }
+
+
+@media only screen and (min-width: 320px) {
+  .maskTop {
+    width: 40%;
+  }
+
+  .symptomsBox {
+    width: 90%;
+    height: 80%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .box {
+    width: 90%;
+    height: 90%;
+  }
+
+  .images {
+    width: 85%;
+  }
+
+  .button {
+    margin-top: 4px;
+    font-size: 15px;
+    width: 15px;
+    height: 2.5em;
+  }
+
+  h1,
+  h3,
+  legend {
+    font-size: 20px;
+  }
+
+  .header li {
+    font-size: 16px;
+  }
+
+  .questionDisplay {
+    font-size: 18px;
+    margin: 0.1em;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .symptomsBox {
+    width: 90%;
+    height: 80%;
+    padding-top: 25px;
+    padding-bottom: 22px;
+  }
+
+  .box {
+    width: 85%;
+    height: 98%;
+  }
+
+  .button {
+    margin-top: 5px;
+    font-size: 15px;
+    width: 20px;
+    height: 2.5em;
+  }
+
+  h1,
+  h3,
+  legend {
+    font-size: 22px;
+  }
+
+  .questionDisplay {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 800px) {  
+  .header li {
+    margin: 1em;
+    font-size: 16px;
+  }
+
+  .symptomsBox {
+    width: 90%;
+    height: 80%;
+  }
+
+  .box {
+    width: 85%;
+    height: 95%;
+  }
+
+  h1,
+  h3,
+  legend {
+    font-size: 22px;
+  }
+
+  .questionsDisplay {
+    font-size: 1em;
+  }
+
+  .button {
+    margin-top: 5px;
+    margin-bottom: 4px;
+    width: 26px;
+    font-size:15px;
+  }
+}
+
