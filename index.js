@@ -42,7 +42,7 @@ const STORE = [
 
 let score = 0;
 let questionNumber = 0;
-
+    //generates questions until STORE length is reached
 function generateQuestion() {
     if (questionNumber < STORE.length){
         return createString(questionNumber);
@@ -70,7 +70,7 @@ function resetResults(){
     $('.score').text(0);
     $('.questionNumber').text(0);
 }
-
+    //Defines functions to be called once quiz begins
 function beginTest(){
     $('.altBox').hide();
     $('.beginTest').on('click', 'startButton', function(event){
@@ -79,7 +79,7 @@ function beginTest(){
         $('questionBox').prepend(generateQuestion());
     });
 }
-
+    //compares answer choice to answer in STORE to define if score will be updated or not once answer is submitted
 function submitAnswer(){
     $('.questionBox').on('submit', function(event){
         event.preventDefault();
@@ -96,19 +96,19 @@ function submitAnswer(){
         }
     });
 }
-
+    //creates approriate response when answer choice matches correct Answer
 function correctAnswer(){
     $('.response').html(`<p class = "wellDone">Great Job!</p>
     <button type= "button" class= "nextButton button">Continue</button>`);
     updateScore();
 }
-
+    //provides correct answer if answer choice doesn't match correct answer
 function wrongAnswer(){
     $('.response').html(`<p class= "correction">The Correct Answer is:</p>
     <p class= "correctAnswer">${STORE[questionNumber].correctAnswer}</p>
     <button type = "submit" class = "nextButton button">Continue</button>`);
 }
-
+    //renders the following question from STORE after showing the correct response
 function nextQuestion(){
     $('.questionBox').on('click', '.nextButton', function(event){
         $('.altBox').hide();
@@ -117,7 +117,7 @@ function nextQuestion(){
         $('.questionBox form').replaceWith(generateQuestion());
     });
 }
-
+    //defines the final page displayed based on final score
 function finalResult(){
     $('.final').show();
 
@@ -154,10 +154,11 @@ function finalResult(){
     <h3>${array[2]}</h3>
     <button type = "submit" class = "restartButton button">Restart Quiz</button>`);
 }
-
+    //clears results and returns to homepage to begin test again
 function restartQuiz(){
-    $('.mainBox').on('click', '.restartButton', function(event){
+    $('.symptomsBox').on('click', '.restartButton', function(event){
         event.preventDefault();
+        resetResults();
         $('altBox').hide();
         $('.startTest').show();
     });
