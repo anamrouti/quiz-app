@@ -96,3 +96,69 @@ function submitAnswer(){
         }
     });
 }
+
+function correctAnswer(){
+    $('.response').html(`<p class = "wellDone">Great Job!</p>
+    <button type= "button" class= "nextButton button">Continue</button>`);
+    updateScore();
+}
+
+function wrongAnswer(){
+    $('.response').html(`<p class= "correction">The Correct Answer is:</p>
+    <p class= "correctAnswer">${STORE[questionNumber].correctAnswer}</p>
+    <button type = "submit" class = "nextButton button">Continue</button>`);
+}
+
+function nextQuestion(){
+    $('.questionBox').on('click', '.nextButton', function(event){
+        $('.altBox').hide();
+        $('.questionBox').show();
+        updateQuestionNumber();
+        $('.questionBox form').replaceWith(generateQuestion());
+    });
+}
+
+function finalResult(){
+    $('.final').show();
+
+
+    const great = [
+        'Great Job!',
+        'You know what it takes to stay safe!',
+        'Share this quiz with your family & friends to share the knowledge!'
+    ]
+    const good = [
+        'Well done.',
+        'It might be a good idea for you to get tested',
+        'Retake this quiz to learn what you need to know about Corona!'
+    ]
+    const bad = [
+        'Needs work',
+        'It is important to stay informed about the virus to prevent the spread!',
+        'The reason why COVID-19 is so dangerous is due to unconcious spreading'
+    ]
+    if(score >= 5){
+        array = great;
+    }
+    else if(score < 5 && score >= 3){
+        array = good;
+    }
+    else {
+        array = bad;
+    }
+
+    return $('.final').html(`
+    <h3>"${array[0]}"</h3> 
+    <h3>Your score is ${score}/7</h3>
+    <p>${array[1]}</p>
+    <h3>${array[2]}</h3>
+    <button type = "submit" class = "restartButton button">Restart Quiz</button>`);
+}
+
+function restartQuiz(){
+    $('.mainBox').on('click', '.restartButton', function(event){
+        event.preventDefault();
+        $('altBox').hide();
+        $('.startTest').show();
+    });
+}
