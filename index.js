@@ -163,3 +163,12 @@ function restartQuiz(){
         $('.startTest').show();
     });
 }
+
+function makeQuiz(){
+    beginTest();
+    generateQuestion();
+    submitAnswer();
+    nextQuestion();
+    restartQuiz();
+}
+$(makeQuiz);
