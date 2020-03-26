@@ -84,7 +84,7 @@ function resetResults(){
     //Defines functions to be called once quiz begins
 function beginTest(){
     $('.altBox').hide();
-    $('.beginTest').on('click', 'startButton', function(event){
+    $('.beginTest').on('click', '.startButton', function(event){
         $('.beginTest').hide();
         $('.questionNumber').text(1);
         $('.questionBox').show();
