@@ -85,14 +85,15 @@ function resetResults(){
 function beginTest(){
     $('.altBox').hide();
     $('.beginTest').on('click', 'startButton', function(event){
-        $('beginTest').hide();
-        $('questionNumber').text(1);
-        $('questionBox').prepend(generateQuestion());
+        $('.beginTest').hide();
+        $('.questionNumber').text(1);
+        $('.questionBox').show();
+        $('.questionBox').prepend(generateQuestion());
     });
 }
     //compares answer choice to answer in STORE to define if score will be updated or not once answer is submitted
 function submitAnswer(){
-    $('.questionBox').on('submit', function(event){
+    $('.symptomsBox').on('submit', function(event){
         event.preventDefault();
         $('.altBox').hide();
         $('.response').show();
