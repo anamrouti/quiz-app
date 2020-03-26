@@ -58,10 +58,12 @@ function createString(questionNumber){
     let formCreator = $(`<form><fieldset><legend class = "questionText">${STORE[questionNumber].question}</legend></fieldset></form>`);
     let fieldSelector = $(formCreator).find('fieldset');
     STORE[questionNumber].answers.forEach(function(answerValue, answerIndex){
-        $(`<label class = "questionDisplay" for = "${answerIndex}" value = "${answerValue}" name = "answer" required>
+        $(`<label class = "questionDisplay" for = "${answerIndex}">
+        <input class = "radio" type = "radio" id = "${answerIndex}" value = "${answerValue}" name = "answer" required>
         <span>${answerValue}</span></label>`).appendTo(fieldSelector);
-        return formCreator;
-    })
+    });
+    $(`<button type = "submit" class = "submitButton button">Submit</button>`).appendTo(fieldSelector);
+    return formCreator;
 }
 function updateScore(){
     score++;
