@@ -54,10 +54,10 @@ function generateQuestion() {
     }
 }
 
-function createString(questionNumber){
-    let formCreator = $(`<form><fieldset><legend class = "questionText">${STORE[questionNumber].question}</legend></fieldset></form>`);
+function createString(questionIndex){
+    let formCreator = $(`<form><fieldset><legend class = "questionText">${STORE[questionIndex].question}</legend></fieldset></form>`);
     let fieldSelector = $(formCreator).find('fieldset');
-    STORE[questionNumber].answers.forEach(function(answerValue, answerIndex){
+    STORE[questionIndex].answers.forEach(function(answerValue, answerIndex){
         $(`<label class = "questionDisplay" for = "${answerIndex}">
         <input class = "radio" type = "radio" id = "${answerIndex}" value = "${answerValue}" name = "answer" required>
         <span>${answerValue}</span></label>`).appendTo(fieldSelector);
@@ -72,7 +72,7 @@ function updateScore(){
 
 function updateQuestionNumber(){
     questionNumber++;
-    $('.questionNumber').text(questionNumber);
+    $('.questionNumber').text(questionNumber +1);
 }
 
 function resetResults(){
@@ -93,7 +93,7 @@ function beginTest(){
 }
     //compares answer choice to answer in STORE to define if score will be updated or not once answer is submitted
 function submitAnswer(){
-    $('.symptomsBox').on('submit', function(event){
+    $('.questionBox').on('submit', function(event){
         event.preventDefault();
         $('.altBox').hide();
         $('.response').show();
@@ -104,7 +104,7 @@ function submitAnswer(){
             correctAnswer();
         }
         else {
-            incorrectAnswer();
+            wrongAnswer();
         }
     });
 }
