@@ -172,7 +172,7 @@ function restartQuiz(){
         event.preventDefault();
         resetResults();
         $('altBox').hide();
-        $('.startTest').show();
+        $('.beginTest').show();
     });
 }
 

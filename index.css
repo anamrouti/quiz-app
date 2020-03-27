@@ -59,6 +59,7 @@ label {
   margin-bottom: 6px;
   width: 90%;
   max-width: 240px;
+  height:400px;
 }
 
 h1,
@@ -82,7 +83,7 @@ legend {
 @media only screen and (min-width: 320px) {
   .maskTop {
     width: 40%;
-    height: 80px;
+    height: 320px;
   }
 
   .symptomsBox {
