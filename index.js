@@ -122,7 +122,7 @@ function wrongAnswer(){
 }
     //renders the following question from STORE after showing the correct response
 function nextQuestion(){
-    $('.questionBox').on('click', '.nextButton', function(event){
+    $('.response').on('click', '.nextButton', function(event){
         $('.altBox').hide();
         $('.questionBox').show();
         updateQuestionNumber();
