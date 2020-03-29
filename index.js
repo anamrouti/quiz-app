@@ -168,7 +168,7 @@ function finalResult(){
 }
     //clears results and returns to homepage to begin test again
 function restartQuiz(){
-    $('.questionBox').on('click', '.restartButton', function(event){
+    $('.final').on('click', '.restartButton', function(event){
         event.preventDefault();
         resetResults();
         $('.altBox').hide();
