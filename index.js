@@ -168,10 +168,10 @@ function finalResult(){
 }
     //clears results and returns to homepage to begin test again
 function restartQuiz(){
-    $('.symptomsBox').on('click', '.restartButton', function(event){
+    $('.questionBox').on('click', '.restartButton', function(event){
         event.preventDefault();
         resetResults();
-        $('altBox').hide();
+        $('.altBox').hide();
         $('.beginTest').show();
     });
 }
