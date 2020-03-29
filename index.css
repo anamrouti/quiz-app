@@ -45,7 +45,7 @@ body {
   margin: auto;
   padding: 3px;
   border: 0.1em #371d0d solid;
-  background-color: #ffd700;
+  background-color: #06c75d;
 }
 
 label {
@@ -72,6 +72,7 @@ legend {
   margin-left: auto;
   margin-right: auto;
   height: 10px;
+  width:25px;
   cursor: pointer;
   text-transform: uppercase;
   border: 0.1em #07773e solid;
@@ -83,7 +84,7 @@ legend {
 @media only screen and (min-width: 320px) {
   .maskTop {
     width: 40%;
-    height: 320px;
+    height: 250px;
   }
 
   .symptomsBox {

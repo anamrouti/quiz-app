@@ -50,7 +50,7 @@ function generateQuestion() {
     else {
         $('.questionBox').hide();
         finalResult();
-        $('.questionNumber').text(10);
+        $('.questionNumber').text(7);
     }
 }
 
