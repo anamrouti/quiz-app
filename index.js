@@ -44,6 +44,8 @@ let score = 0;
 let questionNumber = 0;
     //generates questions until STORE length is reached
 function generateQuestion() {
+    console.log(questionNumber);
+    console.log(STORE[0].question);
     if (questionNumber < STORE.length){
         return createString(questionNumber);
     }
@@ -76,8 +78,8 @@ function updateQuestionNumber(){
 }
 
 function resetResults(){
-    let score = 0;
-    let questionNumber = 0;
+    score = 0;
+    questionNumber = 0;
     $('.score').text(0);
     $('.questionNumber').text(0);
 }
