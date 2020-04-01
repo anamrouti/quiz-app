@@ -8,7 +8,7 @@
 body {
     text-transform: uppercase;
     color: black;
-    background-color: greenyellow;
+    background-color: rgb(60, 240, 247);
 }
 
 .header {
@@ -19,7 +19,7 @@ body {
     display: inline-block;
     margin: 4px;
     list-style: none;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 
@@ -31,8 +31,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
-  background-color: red;
-  border: 0.1em #371d0d solid;
+  background-color: palevioletred;
+  border: 0.1em #371d0d4b solid;
 }
 
 .beginTest,
@@ -45,7 +45,7 @@ body {
   margin: auto;
   padding: 3px;
   border: 0.1em #371d0d solid;
-  background-color: #33c706;
+  background-color:#434742;
 }
 
 label {
@@ -59,7 +59,7 @@ label {
   margin-bottom: 6px;
   width: 90%;
   max-width: 240px;
-  height:400px;
+  height:320px;
 }
 
 h1,
@@ -72,7 +72,7 @@ legend {
   margin-left: auto;
   margin-right: auto;
   height: 10px;
-  width:60px;
+  width:auto;
   cursor: pointer;
   text-transform: uppercase;
   border: 0.1em #07773e solid;
