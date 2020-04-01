@@ -27,11 +27,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
-  background: url(C:\Users\amjad\Desktop\mask.jpg) fixed;
+  margin-bottom: 40px;
+  background-color: red;
   border: 0.1em #371d0d solid;
 }
 
@@ -45,7 +45,7 @@ body {
   margin: auto;
   padding: 3px;
   border: 0.1em #371d0d solid;
-  background-color: #06c75d;
+  background-color: #33c706;
 }
 
 label {
@@ -72,7 +72,7 @@ legend {
   margin-left: auto;
   margin-right: auto;
   height: 10px;
-  width:25px;
+  width:60px;
   cursor: pointer;
   text-transform: uppercase;
   border: 0.1em #07773e solid;
@@ -108,7 +108,7 @@ legend {
   .button {
     margin-top: 4px;
     font-size: 15px;
-    width: 15px;
+    width: 50px;
     height: 2.5em;
   }
 
@@ -151,18 +151,18 @@ legend {
   h1,
   h3,
   legend {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .questionDisplay {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 @media only screen and (min-width: 800px) {  
   .header li {
     margin: 1em;
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .symptomsBox {
@@ -178,7 +178,7 @@ legend {
   h1,
   h3,
   legend {
-    font-size: 22px;
+    font-size: 30px;
   }
 
   .questionsDisplay {
@@ -186,10 +186,10 @@ legend {
   }
 
   .button {
-    margin-top: 5px;
-    margin-bottom: 4px;
-    width: 26px;
-    font-size:15px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    width: 36px;
+    font-size: 24px;
   }
 }
 
