@@ -7,8 +7,8 @@
 
 body {
     text-transform: uppercase;
-    color: black;
-    background-color: rgb(60, 240, 247);
+    color: whitesmoke;
+    background: url(C:\Users\amjad\Desktop\GermsFace.jpg) fixed;
 }
 
 .header {
@@ -31,7 +31,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
-  background-color: palevioletred;
+  background-color: pink;
   border: 0.1em #371d0d4b solid;
 }
 
