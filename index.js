@@ -112,14 +112,14 @@ function submitAnswer(){
 }
     //creates approriate response when answer choice matches correct Answer
 function correctAnswer(){
-    $('.response').html(`<img class = "images" src = "C:\Users\amjad\Desktop\Clinics_RightAnswer.jpg">
+    $('.response').html(`<img class = "images" src = "images/Clinics_RightAnswer.jpg">
     <p class = "wellDone">Thats CORRECT!</p>
     <button type= "button" class= "nextButton button">Next Question</button>`);
     updateScore();
 }
     //provides correct answer if answer choice doesn't match correct answer
 function wrongAnswer(){
-    $('.response').html(`<img class = "images" src = "C:\Users\amjad\Desktop\Clinics_WrongAnswer.jpg"><p class= "correction">Oops! The Correct Answer is:</p>
+    $('.response').html(`<img class = "images" src = "images/Clinics_RightAnswer.jpg"><p class= "correction">Oops! The Correct Answer is:</p>
     <p class= "correctAnswer">${STORE[questionNumber].correctAnswer}</p>
     <button type = "submit" class = "nextButton button">Next Question</button>`);
 }
