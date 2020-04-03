@@ -99,10 +99,10 @@ function finalResult(){
     const great = [
         'Great Job!',
         'You know what it takes to stay safe!',
-        'Share this quiz with your family & friends to share the knowledge!'
+        'Share this quiz with your family & friends to spread the knowledge!'
     ]
     const good = [
-        'Well done.',
+        'Not Bad',
         'It might be a good idea for you to get tested',
         'Retake this quiz to learn what you need to know about Corona!'
     ]
